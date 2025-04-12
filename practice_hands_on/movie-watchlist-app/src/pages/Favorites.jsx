@@ -1,24 +1,18 @@
-import React from "react";
-import { useMovie } from "../context/MovieContext";
+import React, { useContext } from "react";
+import { MovieContext } from "../context/MovieContext";
 import MovieCard from "../components/MovieCard";
 
-
 const Favorites = () => {
-  const { favorites } = useMovie();
+  const { favorites } = useContext(MovieContext);
 
   return (
-    <div className="favorites-page">
-      <h2>❤️ Favorite Movies</h2>
-
-      {favorites.length === 0 ? (
-        <p className="empty-message">No favorite movies yet!</p>
-      ) : (
-        <div className="movie-list">
-          {favorites.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-        </div>
-      )}
+    <div className="app-container">
+      {/* <h1 className="main-title">❤️ Favorite Movies</h1> */}
+      <div className="user-list">
+        {favorites.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+      </div>
     </div>
   );
 };

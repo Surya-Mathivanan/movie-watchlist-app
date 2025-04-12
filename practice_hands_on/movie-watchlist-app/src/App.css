@@ -1,5 +1,73 @@
 /* App.css */
 
+.movie-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.movie-card.watched {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: #a7f3d0;
+}
+
+.movie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.genre-tag {
+  background-color: #cd0494;
+  color: #9cd7f7;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.movie-actions button {
+  border: none;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+
+.movie-actions button:hover {
+  opacity: 0.9;
+}
+
+.movie-actions button:nth-child(1) {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+.movie-actions button:nth-child(2) {
+  background-color: #ffe4e6;
+  color: #c62828;
+}
+
+.movie-actions button:nth-child(3) {
+  background-color: #fce7f3;
+  color: #6a1b9a;
+}
+
+.delete-btn {
+  background-color: #fee2e2 !important;
+  color: #b91c1c !important;
+}
 
 .movie-stats-container {
   margin-left: 220px; /* to offset sidebar */
@@ -140,26 +208,28 @@ body {
 
 
 .app-container {
-  padding: 2rem;
-  max-width: 1000px;
+  padding: 1rem;
+  max-width: 70%;
   margin: 0 auto;
+  margin-right: 8%;
 }
 
 .main-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #e0e0ff;
+  color: #ffffff;
 }
 
 .movie-list {
+
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 2.5rem;
-  margin-left: 18%;
+  gap: 1.5rem;
+  margin-left: 250px;
 }
 
-.movie-card {
+/* .movie-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
@@ -170,13 +240,13 @@ body {
   transform: translateY(20px);
   animation: fadeSlideIn 0.8s ease-out forwards;
 
-  /* Prevent animation conflict with hover */
+
   will-change: transform, opacity;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .movie-card:hover {
-  transform: translateY(0) scale(1.05); /* Combine with slide reset */
+  transform: translateY(0) scale(1.05); 
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -195,7 +265,7 @@ body {
 
 .movie-card:hover .movie-genre {
   color: #ff8ac4;
-}
+} */
 
 .movie-status {
   background: rgba(255, 255, 255, 0.07);
